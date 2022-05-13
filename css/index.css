@@ -3,19 +3,22 @@
 body{
     margin:0;
     font-family: Poppins;
+    padding: 0;
+    height: 100%;
 }
 
 .header{
-    padding: 9px;
+    padding: 1px;
     background-color: #46ad94;
 
     
 }
 .header img{
-    height: 50px;
+    height: 95px;
+    width: 95px;
 }
 .container{
-    color:#46ad94;
+    color:#fff;
     display: flex;
     justify-content: space-between;
     
@@ -24,9 +27,9 @@ body{
 }
 .container ul {
    
-    color:#fff;
+    color:#46ad94;
     display: flex;
-    width: 800px;
+    width: 100%;
     justify-content: space-evenly;
     list-style: none;
     opacity:10px;
@@ -39,16 +42,17 @@ body{
 }
 ul a{
         text-decoration: none;
-        color: #FFF;
+        color: #fff;
+        
     }
 
 
 a:hover {
-  color: #12271e;
+  color: #2c6e5e;
 }
 a{
     text-decoration: none;
-    color: #FFF;
+    color: #46ad94;
     
 }
 .container .login{
@@ -64,7 +68,6 @@ a{
     /*BANNER*/
 
     .banner {
-        background-image:url("../images/a.jpg");
         opacity: 0.9;
         height: 590px;
         background-size: cover;     
@@ -82,22 +85,20 @@ a{
 }
 
 .banner h1{
-    color: #266955;
+    color: #fff;
     margin-top: -10%;
     padding: 0;
     font-size: 36px;
-   text-align: center;
-    
+   text-align: center;   
   
 }
-.banner p{
-    color: #fff;
-    margin-top: 5px;
-    padding: 0;
-    font-size: 25px;
-   text-align: center;
-   font-weight: 100;
- 
+.banner p {
+  color: #FFF;
+  margin-top: 5px;
+  padding: 0;
+  font-size: 25px;
+  text-align: center;
+  font-weight: 100;
 }
 
 
@@ -108,9 +109,9 @@ a{
     font-weight: 600;
     border-radius: 10px;
     font-size: 18px;
-    color: #fff;
+    color: #46ad94;
     padding: 10px 15px;
-    background-color:#FF4000;
+    background-color:#FFF;
     cursor: pointer;
    
 }
@@ -118,18 +119,16 @@ a{
 /* ESTILIZANDO A PÁGINA*/
 
 .h4_simulador {
-  color: #FF9E01;
+  color: #FFF;
 }
 
 .ipt {
   height: 30px;
   width: 400px;
-  border: 1px solid #FF4000;
+  border: 1px solid #FFFF;
   border-radius: 4px;
   text-align: center;
 }
-
-
 
 /* LOGIN */
 
@@ -165,11 +164,11 @@ button {
 .card_erro {
   display: none;
   background-color: #fff;
-  color: black;
+  color: #46ad94;
   width: 230px;
   position: fixed;
   border-radius: 4px;
-  border: #FF4000 3px solid;
+  border: #46ad94 3px solid;
   padding: 10px;
   margin-right: 10%;
 }
@@ -191,7 +190,7 @@ button {
 
 input {
   margin-bottom: 10px;
-  border: 2px solid #FF4000;
+  border: 2px solid #46ad94;
   padding: 10px;
   text-align: center;
   border-radius: 10px;
@@ -204,9 +203,9 @@ input {
   font-weight: 600;
   border-radius: 10px;
   font-size: 18px;
-  color: #fff;
+  color: #46ad94;
   padding: 10px 15px;
-  background-color:#FF4000;
+  background: color #FFF;
   cursor: pointer;
 }
 
