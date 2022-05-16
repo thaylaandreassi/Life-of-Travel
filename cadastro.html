@@ -19,7 +19,7 @@
         rel="stylesheet">
 </head>
 
-<body style="background-color: #d7e7e7;">   
+<body>   
     <!--header inicio-->
     <div class="header">
         <div class="container">
@@ -28,61 +28,78 @@
             <ul>
             <li class="agora"><a href="index.html">Home</a></li>
             <li><a href="dicas.html">Dicas</a></li>
-            <li><a href="sobrenos.html">Sobre nós</a></li>
-            <li><a href="contato.html">Contato</a></li>
+            <li><a href="sobremim.html">Sobre mim</a></li>
             <li><a href="cadastro.html">Cadastre-se</a></li>
-            <li class="login.html"><a href="">Login</a></li>
+            <li><a href="login.html">Login</a></li>
             </ul>
         </div>
     </div>
     <!--header fim-->
-
-
-    <div class="banner ">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
+    <div class="container">
+        <div class="frame">
+            <div class="frame-p">
+                <h1>Explore o mundo com conforto!!!</h1>
+                <br>
+                <p>
+                    O melhor destino você encontrar aqui.
+                    <br><br>
+                    Cadastre-se para você realizar sua viagem dos sonhos!
+                </p>
             </div>
+
         </div>
-        <div class="container tamanho-conteudo">
-            <div class="card medio">
-                <h2>Bem-vindo ao LOT!</h2>
-                <div class="formulario">
-
-                    <!--
-                         Para inserir mais um campo, copie uma das inputs abaixo.
-                         Assim que inserir vá para o script abaixo.
-                        -->
-
-                    <span class="tipo_campo">Nome:</span>
-                    <input id="nome_input" type="text" placeholder="Seu nome">
-
-                    <span class="tipo_campo">E-mail:</span>
-                    <input id="email_input" type="text" placeholder="meuemail@email.com">
-
-                    <span class="tipo_campo">Senha:</span>
-                    <input id="senha_input" type="password" placeholder="******">
-
-                    <span class="tipo_campo">Confirmação da Senha:</span>
-                    <input id="confirmacao_senha_input" type="password" placeholder="******">
-
-                    <button class="btn" onclick="cadastrar()">Cadastrar</button>
-
-                </div>
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
+        <div class="form-frame">
+            <form action="#">
+                <div class="frame-header">
+                    <div class="title">
+                        <h1>Cadastro</h1>
+                    </div>
+                    <div class="login-btn">
+                        <button><a href="login.html">Logar</a></button>
+                    </div>
                 </div>
 
-                <div id="div_erros_login">
+                <div class="inputs">
+                    <div class="input-box">
+                        <label for="nome">Nome</label>
+                        <input id="nome" type="text" name="nome" placeholder="Informe seu nome" aria-required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Informe seu e-mail" aria-required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input id="senha" type="password" name="senha" placeholder="Informe sua senha" aria-required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="confirmPassword">Confirme sua senha</label>
+                        <input id="confirmacao" type="password" name="confirmacao"
+                            placeholder="Informe a senha novamente" aria-required>
+                    </div>
 
                 </div>
-            </div>
+
+                <div class="continue">
+                    <button><a href="#">Continuar</a> </button>
+                </div>
+            </form>
         </div>
     </div>
-
+    <footer>
+        <p class="copyright">© Copyright Lot Of Travel- 2022</p>
+    </footer>
+ 
 </body>
 
 </html>
+ 
+   
+    
+
 
 <script>
     function cadastrar() {

@@ -1,29 +1,31 @@
-  /* ESTILIZANDO A PÁGINA DE CADASTRO*/
-
-  .frame-p h1 {
+ /* ESTILIZANDO A PÁGINA DE LOGIN*/
+ 
+.frame-p h1 {
     font-size: 40px;
     color: #AB3454;
     font-family: Poppins;
     display: flex;
     text-align: center;
-  }
+    margin-left: 150px;
+    
+}
   
-  .frame-p p {
+.frame-p p {
   font-family: Poppins;
   color: #fff;
   font-weight:bolder;
-  }
+  margin-left: 150px;
+  text-align: center;
+  justify-content: center;
+}
   
-  .frame-p p {
-    margin-left:50px;
-  }
-  .frame {
+.frame {
     width: 120%;
     display: flex;
     align-items: center;
-    background-color: #75c9b7;
+    background-color: #46ad94;
     padding: 1rem;
-  }
+}
 
 .form-frame{
   width: 70%;
@@ -31,7 +33,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #46ad94;
+  background-color: #75c9b7;
   padding: 3rem;
 
 }
@@ -39,12 +41,14 @@
 .title h1{
   font-size: 25px;
   color: #AB3454;
+  text-align: center;
+  margin-left: 60px;
 }
 
 .frame-header {
   margin-bottom: 3rem;
   display: flex;
-  justify-content: space-between;
+  text-align: center;
 }
 
 .login-btn {
@@ -85,6 +89,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 1rem 0;
+  flex-direction: column;
+
 }
 
 .input-box {
@@ -148,31 +154,30 @@
   color: #000000c0;
 }
 
-.continue button {
+.enter button {
   width: 100%;
-  margin-top: 2.5rem;
-  border: none;
+  border:#AB3454;
   background-color: #abd699;
   padding: 0.62rem;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.continue button:hover {
+.enter button:hover {
   background-color: #AB3454;
 }
 
-.continue button a {
+.enter button a {
   text-decoration: none;
   font-size: 0.93rem;
   font-weight: 500;
   color: #fff;
 }
-  footer{
+footer {
     text-align: center;
     padding: 1px;
     background-color: #d7e7e7;
-  }
+}
 .copyright{
     color: black;
     font-size: 13px;
@@ -217,38 +222,3 @@
       margin-top: 0.5rem;
   }
 }
-
-/* #ERROS  */
-
-/* .loading-div {
-  width: 50px;
-  margin: auto;
-  display: none;
-}
-
-.loading-div img {
-  height: 50px;
-  width: 50px;
-}
-
-.alerta_erro{
-  display: flex;
-  justify-content: flex-end;
-}
-
-.card_erro {
-  display: none;
-  background-color: #fff;
-  color: #46ad94;
-  width: 230px;
-  position: fixed;
-  border-radius: 4px;
-  border: #CCA4A6 3px solid;
-  padding: 10px;
-  margin-right: 10%;
-}
-
-.card_erro #mensagem_erro{
-  font-weight: 500;
-  font-size: 20px;
-} */

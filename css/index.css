@@ -21,10 +21,10 @@ body{
     color:#fff;
     display: flex;
     justify-content: space-between;
-    
-
-    
+    height: 100%;
+       
 }
+
 .container ul {
    
     color:#46ad94;
@@ -41,10 +41,9 @@ body{
  align-items: center;
 }
 ul a{
-        text-decoration: none;
-        color: #fff;
-        
-    }
+  text-decoration: none;
+  color: #fff;    
+}
 
 
 a:hover {
