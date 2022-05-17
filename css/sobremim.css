@@ -34,19 +34,19 @@
 }
 
 .about-column h1 {
- margin-bottom: 10px;
+ margin-bottom: 500px;
  margin-right: 900px;
+ margin-top: -10px;
  
-
 }
 .text p {
-    margin-top: 20%;
     text-align: center;
     font-size: 0.9em;
     margin: 20px;
     margin-right: 10px;
     flex-direction: row;
     text-align: left;
+    margin-top: -100px;
 }
 
 .text {
@@ -55,5 +55,16 @@
     align-items: center;
     flex-direction: row;
     text-align: center;
+    margin-top: -200px;
 
+}
+footer {
+    text-align: center;
+    padding: 1px;
+    background-color: #fff;
+}
+.copyright{
+    color: black;
+    font-size: 13px;
+    margin: 20px 0;
 }

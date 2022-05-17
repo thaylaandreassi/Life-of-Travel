@@ -183,6 +183,7 @@ footer {
     font-size: 13px;
     margin: 20px 0;
   }
+  
 /* Responsividade */
 @media screen and (max-width: 1330px) {
   .form-image {
