@@ -1,0 +1,66 @@
+.destino {
+    text-align: center;
+    font-size: 0.9em;
+    margin: 20px;
+    padding: 20px;
+}
+body {
+    background-color: #d7e7e7;
+}
+
+.frame {
+    width: 300px;
+    background-color: #75c9b7;
+    padding: 20px;
+    align-items: center;
+    color: #AB3454;
+}
+.container frame  {
+    text-align: center;
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+}
+.destino h3 {
+    color: #AB3454;
+}
+
+/* Responsividade */
+@media screen and (max-width: 1330px) {
+    .form-image {
+        display: none;
+    }
+    .container {
+        width: 50%;
+    }
+    .form {
+        width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 1064px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+    .inputs {
+        flex-direction: column;
+        z-index: 5;
+        padding-right: 5rem;
+        max-height: 10rem;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+    }
+    .gender-inputs {
+        margin-top: 2rem;
+    }
+    .gender-group {
+        flex-direction: column;
+    }
+    .gender-title h6 {
+        margin: 0;
+    }
+    .gender-input {
+        margin-top: 0.5rem;
+    }
+  }

@@ -1,0 +1,70 @@
+/* Estilizando tela do sobre mim  */
+
+.sub-header {
+    height: 50vh;
+    width: 100%;
+    background-image: url(img/eu.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #AB3454;
+}
+
+.sub-header h1 {
+    margin-top: 100px;
+}
+.about-me {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px ;
+}
+
+.about-column {
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.text img {
+    width: 20%;
+    border-radius: 50px;
+    margin-right: 90px;
+    margin-bottom: 200px;
+    
+}
+
+.about-column h1 {
+ margin-bottom: 500px;
+ margin-right: 900px;
+ margin-top: -10px;
+ 
+}
+.text p {
+    text-align: center;
+    font-size: 0.9em;
+    margin: 20px;
+    margin-right: 10px;
+    flex-direction: row;
+    text-align: left;
+    margin-top: -100px;
+}
+
+.text {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    margin-top: -200px;
+
+}
+footer {
+    text-align: center;
+    padding: 1px;
+    background-color: #fff;
+}
+.copyright{
+    color: black;
+    font-size: 13px;
+    margin: 20px 0;
+}
