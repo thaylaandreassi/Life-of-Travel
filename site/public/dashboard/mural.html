@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="./dashboards.css">
-    <script src="../js/funcoes.js"></script>
+    <!-- <script src="../js/funcoes.js"></script> -->
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -18,7 +18,7 @@
         rel="stylesheet">
 </head>
 
-<body onload="validarSessao(), atualizarFeed()" style="background-color: #161618;">
+<body onload="validarSessao(), atualizarFeed()" style="background-color: #75c9b7;">
     <!-- <body onload="validarSessao()"> -->
 
     <div class="janela">
@@ -34,18 +34,18 @@
 
             <div class="btn-nav-white">
                 <a href="cards.html">
-                    <h3>Aquários</h3>
+                    <h3>Dicas exclusivas</h3>
                 </a>
             </div>
 
             <div class="btn-nav-white">
                 <a href="./dashboard.html">
-                    <h3>Gráficos</h3>
+                    <h3>Quiz</h3>
                 </a>
             </div>
 
             <div class="btn-nav">
-                <h3>Mural de Avisos</h3>
+                <h3>Mural de dicas</h3>
             </div>
 
             <div class="btn-logout" onclick="limparSessao()">
@@ -58,7 +58,7 @@
 
             <div class="avisos">
                 <div class="container">
-                    <h1>Publicar um aviso</h1>
+                    <h1>Publicar uma dica</h1>
                     <div class="div-form">
                         <form id="form_postagem" method="post" onsubmit="return publicar()">
                             <label>
@@ -76,7 +76,7 @@
                             <button>Enviar</button>
                         </form>
                     </div>
-                    <h1>Mural de Avisos</h1>
+                    <h1>Mural de dicas</h1>
                     <div class="div-results">
                         <div id="feed_container" class="feed-container">
                         </div>
