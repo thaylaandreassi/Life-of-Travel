@@ -35,7 +35,7 @@ CREATE TABLE usuario (
 	senha VARCHAR(50),
 );
 
-CREATE TABLE dicas (
+CREATE TABLE aviso (
 	id INT PRIMARY KEY IDENTITY(1,1),
 	titulo VARCHAR(100),
 	descricao VARCHAR(150),
