@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: black;
+  background-color: #fff;
 }
 
 .container {
@@ -15,6 +15,14 @@ body {
 
 .header {
   border-bottom: 3px solid #32b9cd;
+  justify-content: space-between;
+  padding: 1px;
+  border-bottom: 3px solid #32b9cd;
+  display: flex;
+  background-color: #AB3454;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 .header .container {
@@ -23,7 +31,7 @@ body {
 
 .header a {
   text-decoration: none;
-  color: #e3b062;
+  color:#32b9cd;
 }
 
 .agora {
@@ -178,7 +186,7 @@ button {
 .card_erro {
   display: none;
   background-color: #fff;
-  color: black;
+  color: #32b9cd;
   width: 230px;
   position: fixed;
   border-radius: 4px;
@@ -204,7 +212,7 @@ button {
 
 input {
   margin-bottom: 10px;
-  border: 2px solid #32b9cd;
+  border: 2px solid #abd699;
   padding: 10px;
   text-align: center;
   border-radius: 10px;
@@ -240,6 +248,7 @@ input {
 .janela {
   display: flex;
   width: 100vw;
+  background-color: #d7e7e7;
 }
 
 .header-left a {
@@ -248,45 +257,54 @@ input {
 }
 
 .header-left {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  height: 100vh;
-  width: 25%;
+  justify-content: space-around;
+  padding: 1px;
+  border-bottom: #AB3454;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
-  border-right: 3px solid #32b9cd;
-  background-color: #212124;
+  height: 700px;
+  width: 300px;
+  border: 3px solid #46ad94;
+  align-content: space-evenly;
+  flex-direction: column;
   /* border: 3px solid pink; */
 }
 
 .dash-right {
   display: flex;
-  width: 75%;
+  width: 55%;
   height: fit-content;
-  background-color: #161618;
+  background-color: #46ad94;
+  opacity: 1px;
   position: relative;
   top: 0;
-  left: 25%;
+  left: 10%;
+  right: 10%;
+  align-items: center;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+  text-align: center;
 }
 
 .header-left h1 {
-  color: #32b9cd;
+  color: #000;
+  
 }
 
 .hello {
   width: 100%;
   display: flex;
-  justify-content: center;
+  
 }
 
 .hello h3 {
-  color: #e3b062;
+  color: #AB3454;
   font-weight: 300;
   font-size: 1.2rem;
+  display: flex;
+  margin-left: 80px;
 }
 
 .hello h3 span {
@@ -294,25 +312,29 @@ input {
 }
 
 .btn-nav {
-  width: 40%;
+  width: 900px;
   color: white;
-  background-color: #e6005a;
+  background-color: #46ad94;
+  border: 3px solid #abd699;
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
+  justify-content:space-evenly;
+  align-items: center;
+  width: 100px;
 }
 
 .btn-nav-white {
   width: 40%;
-  background-color: white;
-  border: 3px solid #e6005a;
+  border: 3px solid #abd699;
+  background-color: #46ad94;
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
 }
 
 .btn-nav-white h3 {
-  color: #e6005a;
+  color: white;
   padding: 0;
   margin: 0;
 }
@@ -327,7 +349,7 @@ input {
   margin: 0;
   padding: 0;
   width: 20%;
-  background-color: #32b9cd;
+  background-color: #46ad94;
   color: white;
   border-radius: 10px;
   text-align: center;
