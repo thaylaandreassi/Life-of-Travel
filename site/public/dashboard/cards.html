@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AcquaTec | Tempo Real</title>
 
-    <link rel="stylesheet" href=".css/style.css">
+    <link rel="stylesheet" href="formulario.css">
     <link rel="stylesheet" href="dashboards.css">
 
     <script src="js/funcoes.js"></script>
@@ -18,203 +18,65 @@
         rel="stylesheet">
 </head>
 
-<body onload="validarSessao(), atualizacaoPeriodica()">
+<!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
+<div>
+    <h1 id="titulo">Planeje uma viagem</h1>
+    <p id="subtitulo">Complete as informações</p>
+    <br>
+</div>
 
-    <div class="janela">
+<!-- Início do formulário -->
+<form>
 
-
-        <div class="header-left dash-header">
-
-            <h1>AcquaTec</h1>
-
-            <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
-            </div>
-
-            <div class="btn-nav">
-                <h3>Aquários</h3>
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="./dashboard.html">
-                    <h3>Gráficos</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="./mural.html">
-                    <h3>Mural de Avisos</h3>
-                </a>
-            </div>
-
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
-            </div>
-
+    <fieldset class="grupo">
+        <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+        <div class="campo">
+            <label for="nome"><strong>Nome</strong></label>
+            <input type="text" name="nome" id="nome" required>
         </div>
 
-        <div class="dash">
-            <div class="regua">
-                <div class="item-regua perigo-frio">
-                    <h4>Perigo</h4>
-                    <h2>0°C</h2>
-                </div>
-                <div class="item-regua alerta-frio">
-                    <h4>Alerta</h4>
-                    <h2>0°C</h2>
-                </div>
-                <div class="item-regua ideal">
-                    <h4>Ideal</h4>
-                    <h2>0°C</h2>
-                </div>
-                <div class="item-regua alerta-quente">
-                    <h4>Alerta</h4>
-                    <h2>0°C</h2>
-                </div>
-                <div class="item-regua perigo-quente">
-                    <h4>Perigo</h4>
-                    <h2>0°C</h2>
-                </div>
-            </div>
-
-            <div class="cards">
-                <div class="card">
-                    <h1>Aquário 1</h1>
-                    <div class="temperatura">
-                        <p id="temp_aquario_1">-°C</p>
-                    </div>
-                    <div class="cor-alerta" id="card_1"></div>
-                </div>
-                <div class="card">
-                    <h1>Aquário 1</h1>
-                    <div class="temperatura">
-                        <p id="temp_aquario_2">-°C</p>
-                    </div>
-                    <div class="cor-alerta" id="card_2"></div>
-
-                </div>
-                <div class="card">
-                    <h1>Aquário 1</h1>
-                    <div class="temperatura">
-                        <p id="temp_aquario_3">-°C</p>
-                    </div>
-                    <div class="cor-alerta ideal" id="card_3"></div>
-                </div>
-                <div class="card">
-                    <h1>Aquário 1</h1>
-                    <div class="temperatura">
-                        <p id="temp_aquario_4">-°C</p>
-                    </div>
-                    <div class="cor-alerta" id="card_4"></div>
-                </div>
-
-            </div>
-
-        </div>
+    <!-- Campo de desenvolvimento web com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
+    <div class="campo">
+        <label><strong>Qual é a sua época do ano favorita?</strong></label>
+        <label>
+            <input type="radio" name="devweb" value="verao" checked>Verão
+        </label>
+        <label>
+            <input type="radio" name="devweb" value="inverno">Inverno
+        </label>
+        <label>
+            <input type="radio" name="devweb" value="outono">Outono
+        </label>
+        <label>
+            <input type="radio" name="devweb" value="primavera">Primavera
+        </label>
     </div>
 
+    <!-- Campo de senioridade com 3 opções para escolha (select option) e css de classe "campo" -->
+    <div class="campo">
+        <label for="continente"><strong>Continente</strong></label>
+        <select id="continente" required>
+          <option selected disabled value="">Selecione</option>
+          <option>América</option>
+          <option>Europa</option>
+          <option>Ásia</option>
+          <option>Oceania</option>
+        </select>
+    </div>
 
+    <!-- Caixa de texto -->
+    <div class="campo">
+        <br>
+        <label for="experiencia"><strong>Valor a ser gasto</strong></label>
+        <textarea rows="6" style="width: 15em" id="experiencia" name="experiencia"></textarea>
+    </div>
+
+    <!-- Botão para enviar o formulário -->
+    <button class="botao" type="submit" onsubmit="">Enviar</button>            
+
+</form>
 </body>
-
+</html>
 <script>
 
-    function atualizacaoPeriodica() {
-        obterdados(1);
-        obterdados(2);
-        obterdados(3);
-        obterdados(4);
-
-        function sendData() {
-			var http = new XMLHttpRequest();
-			http.open('POST', 'http://localhost:3000/api/sendData', false);
-			http.send(null);
-		}
-
-        setInterval(() => {
-			sendData();
-		}, 2000);
-        setTimeout(atualizacaoPeriodica, 5000);
-    }
-
-    function obterdados(idAquario) {
-        fetch(`/medidas/tempo-real/${idAquario}`)
-            .then(resposta => {
-
-                if (resposta.ok) {
-                    resposta.json().then(resposta => {
-
-                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-
-                        var dados = {
-                            temperatura: resposta[0].temperatura,
-                        }
-
-                        alertar(resposta[0].temperatura, idAquario);
-                    });
-                } else {
-
-                    console.error('Nenhum dado encontrado ou erro na API');
-                }
-            })
-            .catch(function (error) {
-                console.error(`Erro na obtenção dos dados do aquario p/ gráfico: ${error.message}`);
-            });
-
-    }
-
-    function alertar(temperatura, idAquario) {
-        var limites = {
-            muito_quente: 23,
-            quente: 22,
-            ideal: 20,
-            frio: 10,
-            muito_frio: 5
-        };
-
-        var classe_temperatura = 'cor-alerta';
-
-        if (temperatura >= limites.muito_quente) {
-            classe_temperatura = 'cor-alerta perigo-quente';
-            console.log("caiu no 1")
-        }
-        else if (temperatura < limites.muito_quente && temperatura >= limites.quente) {
-            classe_temperatura = 'cor-alerta alerta-quente';
-            console.log("caiu no 2")
-        }
-        else if (temperatura < limites.quente && temperatura > limites.frio) {
-            classe_temperatura = 'cor-alerta ideal';
-            console.log("caiu no 3")
-        }
-        else if (temperatura <= limites.frio && temperatura > limites.muito_frio) {
-            classe_temperatura = 'cor-alerta alerta-frio';
-            console.log("caiu no 4")
-        }
-        else if (temperatura < limites.min_temperatura) {
-            classe_temperatura = 'cor-alerta perigo-frio';
-            console.log("caiu no 5")
-        }
-
-        var card;
-
-        if (idAquario == 1) {
-            temp_aquario_1.innerHTML = temperatura + "°C";
-            card = card_1
-        } else if (idAquario == 2) {
-            temp_aquario_2.innerHTML = temperatura + "°C";
-            card = card_2
-        } else if (idAquario == 3) {
-            temp_aquario_3.innerHTML = temperatura + "°C";
-            card = card_3
-        } else if (idAquario == 4) {
-            temp_aquario_4.innerHTML = temperatura + "°C";
-            card = card_4
-        }
-
-        // alterando
-        card.className = classe_temperatura;
-
-    }
-
 </script>
-
-</html>
