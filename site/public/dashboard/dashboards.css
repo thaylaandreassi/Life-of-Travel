@@ -82,6 +82,7 @@ body {
   align-items: stretch;
   border-bottom: 3px solid #e6005a;
   padding: 20px;
+  background-color: #161618;
 }
 
 .publicacao > *:not(:last-child) {

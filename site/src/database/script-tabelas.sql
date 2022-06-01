@@ -13,7 +13,7 @@ CREATE TABLE usuario (
 	senha VARCHAR(45)
 );
 
-CREATE TABLE dicas (
+CREATE TABLE aviso(
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	titulo VARCHAR(100),
 	descricao VARCHAR(150),
