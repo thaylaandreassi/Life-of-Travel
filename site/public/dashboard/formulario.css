@@ -1,3 +1,65 @@
+.header-left {
+    justify-content: space-around;
+    padding: 1px;
+    border-bottom: #AB3454;
+    display: flex;
+    align-items: center;
+    height: 700px;
+    width: 300px;
+    border: 3px solid #46ad94;
+    align-content: space-evenly;
+    flex-direction: column; 
+    margin: -300px;
+    margin-top: -28px;
+    margin-left: -500px;
+}
+
+.btn-nav-white {
+    width: 40%;
+    border: 3px solid #abd699;
+    background-color: #46ad94;
+    border-radius: 5px;
+    text-align: center;
+    padding: 2% 5%;
+
+}
+
+.btn-nav-white a {
+    text-decoration: none;
+    color: white;
+}
+.btn-nav {
+    color: white;
+    background-color: #46ad94;
+    border: 3px solid #abd699;
+    border-radius: 5px;
+    text-align: center;
+    padding: 2% 5%;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100px;
+}
+
+.btn-logout {
+    margin: 0;
+    width: 20%;
+    background-color: #46ad94;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 15px;
+    margin-bottom: 100px;
+    cursor: pointer;
+}
+
+.h3 {
+    color: white;
+    background-color: white;
+}
+
+
+
+
 /* Todos os elementos da página */
 * {
     margin: 0;
@@ -9,6 +71,7 @@
     font-family: sans-serif;
     color: #380B61;
     margin-left: 7%;
+    margin-top: -600px;
 } 
 
 /* Elementos com o ID "subtitulo" */
@@ -107,7 +170,8 @@ fieldset.grupo .campo {
     top: 90%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    margin-top: 30px;
 }
 
 /* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
