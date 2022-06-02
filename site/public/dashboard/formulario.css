@@ -18,7 +18,7 @@ a {
   }  
   
   
-  nav {
+nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -28,13 +28,13 @@ a {
     height: 8vh;
   }
   
-  .nav-list {
+.nav-list {
     list-style: none;
     display: flex;
     background-color: #46ad94;
   }
   
-  .nav-list li {
+.nav-list li {
     letter-spacing: 3px;
     margin-left: 32px;
     background-color: #46ad94;
@@ -107,14 +107,16 @@ a {
 /* Elementos de tag <fieldset>*/
 fieldset {
     border: 0;
+    display: grid;
+    align-items: center;
 }
 
 /* Elemento de tag <body> */
 body{
-    background-color: #F0F8FF;
+    background-color: #000;
     font-family: sans-serif;
     font-size: 1em;
-    color: #59429d;
+    color: #000;
     margin-left: 36%;
     margin-top: 2%;
     justify-content: center;
@@ -122,10 +124,12 @@ body{
 
 /* Elementos de tags <body>, <input>, <Select>, <textarea> e <button> */
 input, select, textarea, button {
-    font-family: sans-serif;
+    font-family: Poppins;
     font-size: 1em;
-    color: #46ad94;
+    color: #000;
     border-radius: 5px;
+    background-color: white;
+    background: white;
 }
 
 /* Elementos de classe "grupo" nos estados das pseudoclasses "before" e "after" */
@@ -155,6 +159,7 @@ input, select, textarea, button {
 fieldset.grupo .campo {
     float:  left;
     margin-right: 1em;
+    flex-direction: column;
 }
 
 /* Elementos de classe "campo" das tags <input> com atributo text e email, da tag <select> e da tag <textarea>*/
@@ -164,6 +169,7 @@ fieldset.grupo .campo {
     box-shadow: 2px 2px 2px #ab3454;
     display: block;
     background-color: white;
+    display: initial;
 }
 
 /* Elementos de classe "campo" de tag <select> e <option>*/
@@ -187,10 +193,8 @@ fieldset.grupo .campo {
     box-shadow: 2px 2px 2px #abd699;
     text-shadow: 1px 1px 1px #46ad94;
     position: absolute;
-    top: 90%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+    margin-bottom: -490px;
+    margin-left: 150px;
 }
 
 /* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
