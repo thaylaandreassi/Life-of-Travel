@@ -6,111 +6,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AcquaTec | Tempo Real</title>
-
+    <title>LOT | Questionário</title>
     <link rel="stylesheet" href="formulario.css">
-    <link rel="stylesheet" href="dashboards.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mural.html">
 
-    <script src="js/funcoes.js"></script>
+    <script src="../js/funcoes.js"></script>
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-</head>
 
-<div class="janela">
-    <div class="header-left">
+    </head>
 
-        <h1>LOT</h1>
+<body onload="validarSessao(), atualizarFeed()">
+    <!-- <body onload="validarSessao()"> -->
 
-        <div class="hello">
-            <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+    <!--INICIO HEADER NAVBAR-->
+    <header>
+        <nav>
+            <ul class="nav-list">
+        
+                <li><a href="mural.html">Dicas</a></li>
+                <li><a href="#">|</a></li>
+                <li><a href="dashboard.html">Comunidade</a></li>
+                <li><a href="#">|</a></li>
+                <li><a href="cards.html">Questionário</a></li>
+
+            </ul>
+            <p style="background-color: #46ad94; color:white;">Olá, <span id="b_usuario" style="background-color: #46ad94; color:white;">usuário</span>!</p>
+            </nav>
+    </header>
+        <!--FIM HEADER NAVBAR-->
+
+    <div class="avisos">
+
+        <div class="container">
+
+            <div class="titulos">
+                <h1>Planeje sua viagem!</h1>
+                <br>
+                <p>Informe todos os campos!</p>
+            </div>
+
+            <div class="div-form">
+                
+                <fieldset class="grupo">
+                    <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+                    <div class="campo">
+                        <label for="nome"><strong>Nome</strong></label>
+                        <input type="text" name="nome" id="nome" required>
+                    </div>
+    
+                <!-- Campo de desenvolvimento web com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
+                <div class="campo">
+                    <label>Qual é a sua estação favorita?</label>
+                    <label>
+                        <input type="radio" name="devweb" value="verao" checked>Verão
+                    </label>
+                    <label>
+                        <input type="radio" name="devweb" value="inverno">Inverno
+                    </label>
+                    <label>
+                        <input type="radio" name="devweb" value="primavera">Primavera
+                    </label>
+                    <label>
+                        <input type="radio" name="devweb" value="outono">Outono
+                    </label>
+                </div>
+    
+                <!-- Campo de senioridade com 3 opções para escolha (select option) e css de classe "campo" -->
+                <div class="campo">
+                    <label for="continente"><strong>Continente</strong></label>
+                    <select id="continente" required>
+                      <option selected disabled value="">Selecione</option>
+                      <option>América</option>
+                      <option>Ásia</option>
+                      <option>África</option>
+                      <option>Europa</option>
+                      <option>Oceania</option>
+                    </select>
+                </div>
+                <!-- Caixa de texto -->
+                <div class="campo">
+                    <br>
+                    <label for="valor"><strong>Informe o valor a ser gasto: </strong></label>
+                    <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+                </div>
+    
+                <!-- Botão para enviar o formulário -->
+                <button class="botao" type="submit" onsubmit="">Enviar</button>            
+    
+            </form>
+    
         </div>
-
-        <div class="btn-nav-white">
-            <a href="cards.html">
-                <h3>Questionário</h3>
-
-            </a>
-        </div>
-
-        <div class="btn-nav-white">
-            <a href="./dashboard.html">
-                <h3>Gráficos</h3>
-            </a>
-        </div>
-
-        <div class="btn-nav">
-            <a href="mural.html"></a>
-            <h3>Mural de Dicas</h3>
-
-        </div>
-
-        <div class="btn-logout" onclick="limparSessao()">
-            <h3>Sair</h3>
-        </div>
-
-    </div>
-
-<!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
-<div>
-    <h1 id="titulo">Planeje uma viagem</h1>
-    <p id="subtitulo">Complete as informações</p>
-    <br>
-</div>
-
-<!-- Início do formulário -->
-<form>
-
-    <fieldset class="grupo">
-        <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
-        <div class="campo">
-            <label for="nome"><strong>Nome</strong></label>
-            <input type="text" name="nome" id="nome" required>
-        </div>
-
-    <!-- Campo de desenvolvimento web com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
-    <div class="campo">
-        <label><strong>Qual é a sua época do ano favorita?</strong></label>
-        <label>
-            <input type="radio" name="devweb" value="verao" checked>Verão
-        </label>
-        <label>
-            <input type="radio" name="devweb" value="inverno">Inverno
-        </label>
-        <label>
-            <input type="radio" name="devweb" value="outono">Outono
-        </label>
-        <label>
-            <input type="radio" name="devweb" value="primavera">Primavera
-        </label>
-    </div>
-
-    <!-- Campo de senioridade com 3 opções para escolha (select option) e css de classe "campo" -->
-    <div class="campo">
-        <label for="continente"><strong>Continente</strong></label>
-        <select id="continente" required>
-          <option selected disabled value="">Selecione</option>
-          <option>América</option>
-          <option>Europa</option>
-          <option>Ásia</option>
-          <option>Oceania</option>
-        </select>
-    </div>
-
-    <!-- Caixa de texto -->
-    <div class="campo">
-        <br>
-        <label for="experiencia"><strong>Valor a ser gasto</strong></label>
-        <textarea rows="6" style="width: 15em" id="experiencia" name="experiencia"></textarea>
-    </div>
-
-    <!-- Botão para enviar o formulário -->
-    <button class="botao" type="submit" onsubmit="">Enviar</button>            
-
-</form>
 </body>
-</html>
-<script>
 
-</script>
+</html>

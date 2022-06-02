@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Poppins;
+  font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #fff;
 }
 
@@ -212,13 +212,11 @@ button {
 
 input {
   margin-bottom: 10px;
-  border: 2px solid #AB3454;
+  border: 2px solid #abd699;
   padding: 10px;
   text-align: center;
   border-radius: 10px;
-  background-color: white;
 }
-
 
 .btn {
   font-family: "Barlow", sans-serif;
@@ -256,6 +254,20 @@ input {
 .header-left a {
   text-decoration: none;
   color: white;
+}
+
+.header-left {
+  justify-content: space-around;
+  padding: 1px;
+  border-bottom: #AB3454;
+  display: flex;
+  align-items: center;
+  height: 700px;
+  width: 300px;
+  border: 3px solid #46ad94;
+  align-content: space-evenly;
+  flex-direction: column;
+  /* border: 3px solid pink; */
 }
 
 .dash-right {

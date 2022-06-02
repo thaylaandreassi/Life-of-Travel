@@ -6,80 +6,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOT | Dicas</title>
+    <title>LOT | Dicas Exclusivas </title>
+    <link rel="stylesheet" href="mural.css">
+    <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./dashboards.css">
-    <link rel="stylesheet" href="./cards.html"
-    <script src="js/funcoes.js"></script>
+    <script src="../js/funcoes.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-</head>
+
+    </head>
 
 <body onload="validarSessao(), atualizarFeed()">
     <!-- <body onload="validarSessao()"> -->
 
-    <div class="janela">
-        <div class="header-left">
+    <!--INICIO HEADER NAVBAR-->
+    <header>
+        <nav>
+            <ul class="nav-list">
+        
+                <li><a href="mural.html">Dicas</a></li>
+                <li><a href="#">|</a></li>
+                <li><a href="dashboard.html">Comunidade</a></li>
+                <li><a href="#">|</a></li>
+                <li><a href="cards.html">Questionário</a></li>
 
-            <h1>LOT</h1>
+            </ul>
+            <p style="background-color: #46ad94; color:white;">Olá, <span id="b_usuario" style="background-color: #46ad94; color:white;">usuário</span>!</p>
+            </nav>
+    </header>
+        <!--FIM HEADER NAVBAR-->
 
-            <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+    <div class="avisos">
+
+        <div class="container">
+
+            <div class="titulos">
+                <h1>Dicas exclusivas para sua viagem</h1>
+                <br>
+                <p>Informe o destino e sua dica!</p>
             </div>
 
-            <div class="btn-nav-white">
-                <a href="cards.html">
-                    <h3>Questionário</h3>
+            <div class="div-form">
+                
+                <form id="form_postagem" method="post" onsubmit="return publicar()">
 
-                </a>
+                    <label>
+                    <p>Destino:</p>
+                    <br>
+                    <input name="titulo" id="titulo" maxlength="100" type="text">
+                    </label>
+                    <br>
+                
+                    <label>
+                    <p>Dica (máximo de 250 caracteres):</p>
+                    <br>
+                    <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
+                    </label>
+                    <br>
+                
+                    <button class="btn-enviar">Enviar</button>
+                        
+                </form>
             </div>
-
-            <div class="btn-nav-white">
-                <a href="./dashboard.html">
-                    <h3>Gráficos</h3>
-                </a>
+            
+            <div class="titulo-coments">
+                <h1>Compartilhe com a galera suas experiências</h1>
             </div>
-
-            <div class="btn-nav">
-                <h3>Mural de Dicas</h3>
-            </div>
-
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
-            </div>
-
-        </div>
-
-        <div class="dash-right">
-
-            <div class="avisos">
-                <div class="container">
-                    <h1>Publicar uma dica!</h1>
-                    <div class="div-form">
-                        <form id="form_postagem" method="post" onsubmit="return publicar()">
-                            <label>
-                                Destino:
-                                <br>
-                                <input name="titulo" id="titulo" maxlength="100" type="text">
-                            </label>
-                            <br>
-                            <label>
-                                Relato (máximo de 250 caracteres):
-                                <br>
-                                <textarea name="descricao" id="textarea_descricao" maxlength="250" rows="5"></textarea>
-                            </label>
-                            <br>
-                            <button>Enviar</button>
-                        </form>
-                    </div>
+            <br>
+            <div class="div-results">
+                <div id="feed_container" class="feed-container">
                 </div>
             </div>
 
-
+        </div>
+    </div>
 
 
             <!-- MODAL -->
@@ -107,7 +110,7 @@
 </html>
 
 <script>
-    
+
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
     function limparFormulario() {

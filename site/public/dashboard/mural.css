@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Sansita&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background-color: #d7e7e7;
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+
+}
+a {
+    color: white;
+    text-decoration: none;
+    background-color: #46ad94;
+  }  
+  
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Poppins;
+    font-weight: bold;
+    background: #46ad94;
+    height: 8vh;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    background-color: #46ad94;
+  }
+  
+  .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+    background-color: #46ad94;
+  }
+
+.nav-list p {
+  background-color: #46ad94;
+}
+
+
+
+.container {
+    width: 80%;
+    font-family: Poppins;
+    margin-top: 30px;
+    margin-left: 100px;
+    flex-direction: column;
+  }
+
+.titulos{
+    margin-bottom: 20px;
+}
+.titulos h1 {
+    color: #ab3454;
+    font-size: 30px;
+    text-align: center;
+}
+.titulos h1:hover {
+    color: #46ad94;
+    transition: 0.3s;
+}
+.titulos p{
+    font-size: 23px;
+    color: #000;
+    font-family:Poppins;
+    font-weight: bold;
+    
+}
+.p {
+    font-family: Poppins;
+    font-weight: bold;
+}
+
+/*FIM CONTAINER DA PAG*/
+
+
+  /*INICIO ÁREA PARA COMENTAR*/
+  .avisos .div-form textarea {
+    width: 100%;
+    border: 2px solid #ab3454;
+    background-color: white;
+    border-radius: 20px;
+  }
+  
+.btn-enviar {
+    cursor: pointer;
+    font-family: Poppins;
+    border: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #abd699;
+    width: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .btn-enviar:hover{
+    background-color: #ab3454;
+  }
+  .publicacao-btn-editar {
+    cursor: pointer;
+    font-family: Poppins;
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px 8px;
+    color: white;
+    background-color: #ab3454;
+    width: 80px;
+    margin: 10px;
+  }
+.publicacao-btn-editar:hover{
+    background-color: #46ad94;
+
+}
+  
+  .publicacao {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 20px;
+    border: 2px solid #abd699;
+  }
+
+  .div-results {
+    width: 100%;
+  }
+
+  /*COR DE FUNDO DO CAMPO DE COMENTARIO*/
+  .div-results .feed-container {
+    background-color: #cca4a64b;
+    border-radius: 5px;
+    margin-bottom: 80px;
+    box-shadow: rgba(0, 0, 0, 0.158) 16px 16px 16px;
+  }
+
+  /*ALINHAMENTO DOS BOTOES NO CAMPO COMENTARIO*/
+  .div-buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+.titulo-coments{
+    margin-top: 20px;
+    color: #46ad94
+}
+
+    /*FIM ÁREA PARA COMENTAR*/
