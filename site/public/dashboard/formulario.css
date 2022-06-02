@@ -183,7 +183,7 @@ fieldset.grupo .campo {
 }
 
 /* Elemento de classe "botao" */
-.botao {
+.botao3 {
     font-size: 1.2em;
     background: #abd699;
     border: 0;
@@ -193,12 +193,51 @@ fieldset.grupo .campo {
     box-shadow: 2px 2px 2px #abd699;
     text-shadow: 1px 1px 1px #46ad94;
     position: absolute;
-    margin-bottom: -490px;
-    margin-left: 150px;
+    margin-bottom: -310px;
+    margin-left: 170px;
+}
+
+.botao2 {
+    font-size: 1.2em;
+    background: #abd699;
+    border: 0;
+    margin-bottom: 1em;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px #abd699;
+    text-shadow: 1px 1px 1px #46ad94;
+    position: absolute;
+    margin-bottom: -310px;
+    margin-left: 10px;
+}
+.botao1 {
+    font-size: 1.2em;
+    background: #abd699;
+    border: 0;
+    margin-bottom: 1em;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px #abd699;
+    text-shadow: 1px 1px 1px #46ad94;
+    position: absolute;
+    margin-bottom: -310px;
+    margin-left: 10px;
 }
 
 /* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
-.botao:hover {
+.botao1:hover {
+    background: #ab3454;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+
+.botao2:hover {
+    background: #ab3454;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+
+.botao3:hover {
     background: #ab3454;
     box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
     text-shadow: none;

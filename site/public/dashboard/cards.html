@@ -20,7 +20,7 @@
 
     </head>
 
-<body onload="validarSessao(), atualizarFeed()">
+<body onload="validarSessao()">
     <!-- <body onload="validarSessao()"> -->
 
     <!--INICIO HEADER NAVBAR-->
@@ -54,26 +54,18 @@
                 
                 <fieldset class="grupo">
                     <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
-                    <div class="campo">
-                        <label for="nome"><strong>Nome</strong></label>
-                        <input type="text" name="nome" id="nome" required>
-                    </div>
     
                 <!-- Campo de desenvolvimento web com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
                 <div class="campo">
-                    <label>Qual é a sua estação favorita?</label>
-                    <label>
-                        <input type="radio" name="devweb" value="verao" checked>Verão
-                    </label>
-                    <label>
-                        <input type="radio" name="devweb" value="inverno">Inverno
-                    </label>
-                    <label>
-                        <input type="radio" name="devweb" value="primavera">Primavera
-                    </label>
-                    <label>
-                        <input type="radio" name="devweb" value="outono">Outono
-                    </label>
+                    <label for="estacao"><strong>Qual é a sua estação favorita?</strong></label>
+                    <select id="estacao" required>
+                            <option selected disabled value="">Selecione</option>
+                            <option value="verao">Verão</option>
+                            <option value="inverno">Inverno</option>
+                            <option value="primavera">Primavera</option>
+                            <option value="outono">Outono</option>
+                    </select>
+                    <button class="botao1" onsubmit="botao1()">Enviar</button>
                 </div>
     
                 <!-- Campo de senioridade com 3 opções para escolha (select option) e css de classe "campo" -->
@@ -81,26 +73,48 @@
                     <label for="continente"><strong>Continente</strong></label>
                     <select id="continente" required>
                       <option selected disabled value="">Selecione</option>
-                      <option>América</option>
-                      <option>Ásia</option>
-                      <option>África</option>
-                      <option>Europa</option>
-                      <option>Oceania</option>
+                      <option value="america">América</option>
+                      <option value="asia">Ásia</option>
+                      <option value="africa">África</option>
+                      <option value="europa">Europa</option>
+                      <option value="oceania">Oceania</option>
                     </select>
+                    <button class="botao2" onsubmit="botao2()">Enviar</button>
                 </div>
                 <!-- Caixa de texto -->
                 <div class="campo">
                     <br>
                     <label for="valor"><strong>Informe o valor a ser gasto: </strong></label>
-                    <textarea  style="width: 26em" id="experiencia" name="experiencia"></textarea>
+                    <input  style="width: 26em; background-color: white;" id="ipt_valor"></input>
                 </div>
     
                 <!-- Botão para enviar o formulário -->
-                <button class="botao" onsubmit="">Enviar</button>            
-    
+                <button class="botao3" onsubmit="botao3()">Enviar</button>            
+
+                <span id="span_msg"></span>
             </form>
     
         </div>
 </body>
-
 </html>
+<script>
+
+    var valor = Number(ipt_valor.value);
+  function botao1() {
+      if (estacao.value = '') {
+          alert('Insira um valor')
+      }
+  }
+
+  function botao2() {
+      if (continente.value = '') {
+          alert('Insira um valor')
+      }
+  }
+
+  function botao3() {
+      if (valor <= 0) {
+          alert('Insira um valor')
+      }
+  }
+</script>
