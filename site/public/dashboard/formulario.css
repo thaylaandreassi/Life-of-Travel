@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  background-color: #d7e7e7;
+  background-color: white;
   font-weight: bold;
   align-items: center;
   text-align: center;
@@ -223,6 +223,21 @@ fieldset.grupo .campo {
     margin-bottom: -310px;
     margin-left: 10px;
 }
+
+.botao4 {
+    font-size: 1.2em;
+    background: #abd699;
+    border: 0;
+    margin-bottom: 1em;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px #abd699;
+    text-shadow: 1px 1px 1px #46ad94;
+    position: absolute;
+    margin-bottom: -310px;
+    margin-left: 10px;
+}
+
 
 /* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
 .botao1:hover {

@@ -90,8 +90,6 @@
     
                 <!-- Botão para enviar o formulário -->
                 <button class="botao3" onsubmit="botao3()">Enviar</button>            
-
-                <span id="span_msg"></span>
             </form>
     
         </div>
@@ -101,13 +99,13 @@
 
     var valor = Number(ipt_valor.value);
   function botao1() {
-      if (estacao.value = '') {
+      if (estacao.value == '') {
           alert('Insira um valor')
       }
   }
 
   function botao2() {
-      if (continente.value = '') {
+      if (continente.value == '') {
           alert('Insira um valor')
       }
   }
