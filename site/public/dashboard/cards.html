@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOT | Questionário</title>
     <link rel="stylesheet" href="formulario.css">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="mural.html">
 
     <script src="../js/funcoes.js"></script>
@@ -39,80 +39,217 @@
             </nav>
     </header>
         <!--FIM HEADER NAVBAR-->
-
-    <div class="avisos">
-
-        <div class="container">
-
-            <div class="titulos">
-                <h1>Planeje sua viagem!</h1>
-                <br>
-                <p>Informe todos os campos!</p>
-            </div>
-
-            <div class="div-form">
-                
-                <fieldset class="grupo">
-                    <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
-    
-                <!-- Campo de desenvolvimento web com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
-                <div class="campo">
-                    <label for="estacao"><strong>Qual é a sua estação favorita?</strong></label>
-                    <select id="estacao" required>
-                            <option selected disabled value="">Selecione</option>
-                            <option value="verao">Verão</option>
-                            <option value="inverno">Inverno</option>
-                            <option value="primavera">Primavera</option>
-                            <option value="outono">Outono</option>
-                    </select>
-                    <button class="botao1" onsubmit="botao1()">Enviar</button>
-                </div>
-    
-                <!-- Campo de senioridade com 3 opções para escolha (select option) e css de classe "campo" -->
-                <div class="campo">
-                    <label for="continente"><strong>Continente</strong></label>
-                    <select id="continente" required>
-                      <option selected disabled value="">Selecione</option>
-                      <option value="america">América</option>
-                      <option value="asia">Ásia</option>
-                      <option value="africa">África</option>
-                      <option value="europa">Europa</option>
-                      <option value="oceania">Oceania</option>
-                    </select>
-                    <button class="botao2" onsubmit="botao2()">Enviar</button>
-                </div>
-                <!-- Caixa de texto -->
-                <div class="campo">
-                    <br>
-                    <label for="valor"><strong>Informe o valor a ser gasto: </strong></label>
-                    <input  style="width: 26em; background-color: white;" id="ipt_valor"></input>
-                </div>
-    
-                <!-- Botão para enviar o formulário -->
-                <button class="botao3" onsubmit="botao3()">Enviar</button>            
+            <div class="container">	
+              <div class="row">
+                  <div class="two-thirds column">
+                  <h2>Descubra se você é um bom viajante!!!</h2>
+          
+                  <!-- progress bar será a barra de prenchimento -->
+                  <div id="progress_bar"></div>
+                      <form class="questions_box">
+          
+                          <div id="question-1">
+                            <h2>Questão 1</h2>
+                              <h3>Você viaja muito? </h3>
+                              <input id="question-1-answer-a" type="radio" name="favelang" value=1> O que seria viajar?<br>
+                              <input id="question-1-answer-b" type="radio" name="favelang" value=2> Raramente<br>
+                              <input id="question-1-answer-c" type="radio" name="favelang" value=3> Sim, já conheci alguns países e cidades<br>
+                              <div id="submit1" class="button">Enviar Resposta</div>
+                      <div class="clearfix"></div>
+                          </div>
+          
+                         <div id="question-2">
+                             <h2>Questão 2</h2>
+                             <h3>Você viaja em épocas especificas do ano?</h3>
+                           <input id="question-2-answer-a" type="radio" name="favelang" value="1"> Sim! Sempre nos mesmos meses<br>
+                             <input id="question-2-answer-b" type="radio" name="favelang" value="2"> Só quando tem promo e férias<br>
+                             <input id="question-2-answer-c" type="radio" name="favelang" value="3"> Não, sempre que posso, estou viajando!!<br>
+                             <div id="submit2" class="button">Enviar Resposta</div>
+                     <div class="clearfix"></div>
+                         </div>
+                        
+                         <div id="question-3">	
+                             <h2>Questão 3</h2>
+                             <h3>Você tem um destino favorito?</h3>
+                           <input id="question-3-answer-a" type="radio" name="favelang" value="1"> Sim, sempre que posso volto para o mesmo lugar<br>
+                             <input id="question-3-answer-b" type="radio" name="favelang" value="2"> Onde estiver barato, eu estou indo<br>
+                             <input id="question-3-answer-c" type="radio" name="favelang" value="3"> De jeito nenhum, sou apaixonado/a por todos os lugares que eu conheço <br>
+                             <div id="submit3" class="button">Enviar Resposta</div>
+                     <div class="clearfix"></div>
+                         </div>
+          
+                   <div id="question-4">
+                      <h2>Questão 4</h2>
+                      <h3>Você costuma comer as comidas típicas dos locais visitados?</h3>
+                      <input id="question-1-answer-a" type="radio" name="favelang" value="1">Não, sempre procuro comida brasileira!!<br>
+                      <input id="question-1-answer-b" type="radio" name="favelang" value="2">Se tiver uma aparência boa, sim!<br>
+                      <input id="question-1-answer-c" type="radio" name="favelang" value="3">Experimento tuuuuuudo!!<br>
+                      <div id="submit4" class="button">Enviar Resposta</div>
+                      <div class="clearfix"></div>
+                    </div>
+          
+                 <div id="question-5">
+                      <h2>Questão 5</h2>
+                      <h3>Você compartilha suas viagens com outras pessoas?</h3>
+                      <input id="question-1-answer-a" type="radio" name="favelang" value="1"> Não, eu sempre viajo sozinho/a<br>
+                      <input id="question-1-answer-b" type="radio" name="favelang" value="2">De vez em quando..<br>
+                      <input id="question-1-answer-c" type="radio" name="favelang" value="3">Sempre!!! Principalmente conhecer pessoas novas!<br>
+                      <div id="submit5" class="button">Enviar Resposta</div>
+                      <div class="clearfix"></div>
+                 </div>
+          
+                <div id="question-6"> 
+                     <h2>Obrigado por responder a pesquisa!</h2>
+                     <h3>Seu score de viagens é: </h3>
+                     <h1 id=printtotalscore></h1>
+                     <p id=printscoreinfo></p>
+          
+                 </div>
+          
+          
+                            
             </form>
-    
+          
         </div>
-</body>
+    </div>
+</div>
+<script src="scripts.js"></script>
+</body>          
 </html>
 <script>
+// Variavél vazia para receber as respostas 
+// Foi usado a chave porque determina que lá dentro vai chegar um objeto
+var answers = {};
 
-    var valor = Number(ipt_valor.value);
-  function botao1() {
-      if (estacao.value == '') {
-          alert('Insira um valor')
-      }
-  }
 
-  function botao2() {
-      if (continente.value == '') {
-          alert('Insira um valor')
-      }
-  }
+// Armazenar todas as questões do html 
+// Coloquei em var para poder armazenar
+// O document representa a página e o get element by id vai pegar o elemento de acordo com o id dele
+var question_one = document.getElementById('question-1');
+var question_two = document.getElementById('question-2');
+var question_three = document.getElementById('question-3');
+var question_four = document.getElementById('question-4');
+var question_five = document.getElementById('question-5');
 
-  function botao3() {
-      if (valor <= 0) {
-          alert('Insira um valor')
-      }
-  }
+// foi atribuido os valores no function, ou seja, os parametros para colocar o que o answer vai receber
+function storeAnswer(question_number, event){
+// pegando apenas os eventos relacionados com o tipo de radio
+    if(event.target.type === 'radio'){
+        // apenas para controlar no console o evento e o value
+        //toda vez que desparar um evento o value será colocado
+        console.log(event.target.value);
+        // vetor chamado answers com dois elementos
+        // o elemento será do tipo inteiro, por isso do parseInt
+        // no console ele é como uma string e pelo parseint ele se torna inteiro! 
+        // dentro do objeto deve ser criado um vetor com a questão e o número da questão
+        // está unindo as duas questões
+        answers['question'+question_number] = parseInt(event.target.value);
+        // para armazenar, ele retorna na console a questão e o número
+        console.log(answers);
+    }
+}
+// adicionando o evento de click em todas as divs
+// chama a função storeAnswer com o número da pergunta
+// o que faz o event listener?
+question_one.addEventListener('click', function(event){
+    storeAnswer(1, event)
+})
+question_two.addEventListener('click', function(event){
+    storeAnswer(2, event)
+})
+question_three.addEventListener('click', function(event){
+    storeAnswer(3, event)
+})
+question_four.addEventListener('click', function(event){
+    storeAnswer(4, event)
+})
+question_five.addEventListener('click', function(event){
+    storeAnswer(5, event)
+})
+
+//função para armazenar o total score
+// está sendo passado os parametros, como: answer.question1+
+// o + é pq está somando os valores!
+function totalScore(){
+    var total_score = 
+    answers.question1+
+    answers.question2+
+    answers.question3+
+    answers.question4+ 
+    answers.question5;
+    
+    return total_score;
+}
+
+// função do que vai receber info de acordo com a score
+// menor que sete pq é a 'metade' de 15
+function getInfoBasedOnScore(){
+    if(totalScore() < 7){
+        var score_info = "Você precisa viajar mais.. :(";
+    } else if(totalScore() > 7){
+        var score_info = "Parabéns! Você é um viajante nato!"
+    }
+    return score_info;
+}
+
+// submit pq está no id da div dos botões
+var submit1 = document.getElementById('submit1');
+var submit2 = document.getElementById('submit2');
+var submit3 = document.getElementById('submit3');
+var submit4 = document.getElementById('submit4');
+var submit5 = document.getElementById('submit5');
+
+//função para pular para as próximas questões
+// o paramêtro é o question_number por conta da ordem 
+function nextQuestion(question_number){
+    // essa variavel vai pegar a questão corrente
+    // usa-se o menos 1 para manipular e fazer a questão anterior sumir, ps: fica númerico
+    var current_question_number = question_number - 1;
+    // para devolver como string, como inteiro
+    var question_number = question_number.toString();
+    var current_question_number = current_question_number.toString();
+
+    // Para receber as strings pois não pode ser passado como número
+    // o + é para concatenar
+    // o primeiro elemento é para o user ver, pegou o elemento pelo id  
+    var el = document.getElementById('question-'+question_number);
+    var el2 = document.getElementById('question-'+current_question_number);
+     
+    el.style.display = "block";
+    el2.style.display = "none";
+}
+//  criar o evento em cada botão
+submit1.addEventListener('click', function(){
+    // passando as questões
+    nextQuestion(2);
+    // fazendo a barrinha aumentar  
+    growProgressBar('40%');
+})
+submit2.addEventListener('click', function(){
+    nextQuestion(3);
+    growProgressBar('60%');
+})
+submit3.addEventListener('click', function(){
+    nextQuestion(4);
+    growProgressBar('80%');
+})
+submit4.addEventListener('click', function(){
+    nextQuestion(5);
+    growProgressBar('100%');
+})
+submit5.addEventListener('click', function(){
+    nextQuestion(6);
+})
+// para adicionar os resultados junto com o innerHTML 
+submit5.addEventListener('click', function(){
+    document.getElementById("printtotalscore").innerHTML = totalScore();
+    document.getElementById("printscoreinfo").innerHTML = getInfoBasedOnScore();
+})
+
+// mostrar o progress bar, para o tamanho e afins..
+function growProgressBar(percentage_width){
+    var bar = document.getElementById("progress_bar");
+    bar.style.width = percentage_width;
+}
+
 </script>

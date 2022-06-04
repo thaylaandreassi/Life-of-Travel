@@ -80,185 +80,145 @@ nav {
 
 /*FIM CONTAINER DA PAG*/
 
-    /* Todos os elementos da página */
-* {
-    margin: 0;
-    padding: 0;
+.container {
+    position: relative;
+    width: 100%;
+  
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box; 
 }
-
-/* Elementos com o ID "titulo" */
-#titulo {
-    font-family: sans-serif;
-    color: #380B61;
-    margin-left: 7%;
-} 
-
-/* Elementos com o ID "subtitulo" */
-#subtitulo {
-    font-family: sans-serif;
-    color: #380B61;
-    margin-left: 10%;
-} 
-
-#check{
-    display: inline-block;
+.column {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    float: left;
+    box-sizing: border-box; 
 }
-
-/* Elementos de tag <fieldset>*/
-fieldset {
-    border: 0;
-    display: grid;
-    align-items: center;
+  
+@media (min-width: 640px) {
+    .container {
+      width: 90%;
+      padding: 0; }
+    .column {
+      margin-left: 4%; }
+    .column:first-child {
+      margin-left: 0; }
+  
+    .full-width.column              { width: 100%; margin-left: 0; }  
+  
+    .one-half.column                { width: 48%; }
+  
+    .one-third.column               { width: 30.6666666667%; }
+    .two-thirds.column              { width: 65.3333333333%; }
+  
+    .one-quarter.column             { width: 22%; }
+    .two-quarter.column             { width: 48%; }
+    .three-quarter.column           { width: 74%; }
+  
+    .one-half.column                { width: 48%; }
+  
+              
+  
 }
-
-/* Elemento de tag <body> */
-body{
-    background-color: #000;
-    font-family: sans-serif;
-    font-size: 1em;
-    color: #000;
-    margin-left: 36%;
-    margin-top: 2%;
-    justify-content: center;
-}
-
-/* Elementos de tags <body>, <input>, <Select>, <textarea> e <button> */
-input, select, textarea, button {
+  
+.container:after,
+.row:after,
+.clearfix {
+content: "";
+display: table;
+clear: both; }
+  
+  
+body {
     font-family: Poppins;
-    font-size: 1em;
+    font-size: 16px;
     color: #000;
-    border-radius: 5px;
     background-color: white;
-    background: white;
-}
-
-/* Elementos de classe "grupo" nos estados das pseudoclasses "before" e "after" */
-.grupo:before, .grupo:after {
-    display: table;
-}
-
-/* Elementos de classe "grupo" no estado da pseudoclasse "after" */
-.grupo:after {
-    clear: both;
-}
-
-/* Elementos de classe "campo" */
-.campo {
-    margin-bottom: 1em;
-}
-
-/* Elementos de classe "campo" de tag <label> */
-.campo label {
-    margin-bottom: 0.2em;
-    color: black;
-    display: block;
+    margin: 0;
     font-weight: bold;
 }
-
-/* Elementos de classe "campo" ou "grupo" de tag <fieldset> */
-fieldset.grupo .campo {
-    float:  left;
-    margin-right: 1em;
-    flex-direction: column;
+  
+h1, h2, h3, h4 {
+    font-family: Poppins;
+    color: #ab3454;
+    margin-top: 0;
 }
-
-/* Elementos de classe "campo" das tags <input> com atributo text e email, da tag <select> e da tag <textarea>*/
-.campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea {
-    padding: 0.2em;
-    border: 2px solid #ab3454;
-    box-shadow: 2px 2px 2px #ab3454;
-    display: block;
-    background-color: white;
-    display: initial;
+  
+h1 {
+    font-size: 54px;
 }
-
-/* Elementos de classe "campo" de tag <select> e <option>*/
-.campo select option {
-    padding-right: 1em;
+  
+h2 {
+    font-size: 36px;
 }
-
-/* Elemento de classe "campo" com tag <input>, <select> e <textarea> tocas com estado da pseudoclasse "focus"*/
-.campo input:focus, .campo select:focus, .campo textarea:focus {
-    background: #E0E0F8;
+  
+h3 {
+    color: #ab3454;
+    font-size: 26px;
 }
-
-/* Elemento de classe "botao" */
-.botao3 {
-    font-size: 1.2em;
-    background: #abd699;
-    border: 0;
-    margin-bottom: 1em;
-    color: #ffffff;
-    padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px #abd699;
-    text-shadow: 1px 1px 1px #46ad94;
-    position: absolute;
-    margin-bottom: -310px;
-    margin-left: 170px;
+h3:hover {
+    color: #abd699;
+    transition: 0.3s;
 }
-
-.botao2 {
-    font-size: 1.2em;
-    background: #abd699;
-    border: 0;
-    margin-bottom: 1em;
-    color: #ffffff;
-    padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px #abd699;
-    text-shadow: 1px 1px 1px #46ad94;
-    position: absolute;
-    margin-bottom: -310px;
-    margin-left: 10px;
+  
+h2:hover {
+    color: #abd699;
+    transition: 0.2s;
 }
-.botao1 {
-    font-size: 1.2em;
-    background: #abd699;
-    border: 0;
-    margin-bottom: 1em;
-    color: #ffffff;
-    padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px #abd699;
-    text-shadow: 1px 1px 1px #46ad94;
-    position: absolute;
-    margin-bottom: -310px;
-    margin-left: 10px;
+  
+  
+  
+.center {
+    text-align: center;
 }
-
-.botao4 {
-    font-size: 1.2em;
-    background: #abd699;
-    border: 0;
-    margin-bottom: 1em;
-    color: #ffffff;
-    padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px #abd699;
-    text-shadow: 1px 1px 1px #46ad94;
-    position: absolute;
-    margin-bottom: -310px;
-    margin-left: 10px;
+  
+.questions_box {
+    background-color: #46ad94;
+    padding: 20px;
+    text-align: left;
+    max-width: 960px;
+    width: 630px;
+    margin-top: 20px;
+    margin-left: 150px;
 }
-
-
-/* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
-.botao1:hover {
-    background: #ab3454;
-    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: none;
-}
-
-.botao2:hover {
-    background: #ab3454;
-    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: none;
-}
-
-.botao3:hover {
-    background: #ab3454;
-    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: none;
-}
-
-/* Elementos de classe botão e de tag <select> */
-.botao, select{
+  
+.button {
+    font-family: Poppins;
+    margin: 10px 0 0 0;
+    float: right;
     cursor: pointer;
+    font-size: 1em;
+    border: none;
+    padding: 10px 15px;
+    line-height: 18px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    vertical-align: baseline;
+    background: #ab3454;
+    color: white;
+    display: inline-block;
+   
 }
+  
+.button:hover {
+    background-color: #abd699;
+    color: white;
+}
+  
+#question-2, #question-3, #question-4, #question-5, #question-6{
+    display: none;
+}
+  
+#progress_bar {
+    background-color: #abd699;
+    width: 20%;
+    height: 10px;
+    transition: all 100ms ease-in-out;
+    margin-left: 150px;
+    margin-top: 50px;
+    margin-bottom: -20px;
+}
+  
