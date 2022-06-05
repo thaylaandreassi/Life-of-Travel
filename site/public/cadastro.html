@@ -19,7 +19,7 @@
         rel="stylesheet">
 </head>
 
-<body>   
+<body onload="comentar()">   
     <!--header inicio-->
     <div class="header">
         <div class="container">
@@ -41,9 +41,9 @@
                 <h1>Explore o mundo com conforto!!!</h1>
                 <br>
                 <p>
-                    O melhor destino você encontra aqui.
+                    As melhores dicas você encontra aqui!
                     <br><br>
-                    Cadastre-se para você realizar sua viagem dos sonhos!
+                    Temos <b id="cont_aviso"></b> dicas! Venha realizar o seu sonho!
                 </p>
             </div>
 
@@ -99,6 +99,51 @@
 
 </html>
 <script>
+
+function comentar() {
+    fetch("/avisos/comentar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
+      .then(function (resposta) {
+        console.log("ESTOU NO THEN DO entrar()!");
+
+        if (resposta.ok) {
+          console.log(resposta);
+
+          /*parametrizar as respostas do console*/
+          console.log("Deu certo a contagem !!", resposta)
+          resposta.json().then(cont => {
+            console.log(cont);
+            console.log(JSON.stringify(cont[0].c));
+            var conteudo = document.getElementById("cont_aviso")
+            var comentarios_cadastrados = cont[0].c;
+            conteudo.innerHTML = `${comentarios_cadastrados}`;
+          })
+
+           /*chamando a resposta em uma div - inner*/
+          //  var conteudo = document.getElementById("cont_usuarios")
+          //  var usuarios_cadastrados = cont[0].contagem;
+          //  conteudo.innerHTML = `${usuarios_cadastrados}`;
+
+        } else {
+          console.log("Houve um erro ao tentar realizar a contagem!");
+
+          resposta.text().then((texto) => {
+            console.error(texto);
+            finalizarAguardar(texto);
+          });
+        }
+      })
+      .catch(function (erro) {
+        console.log(erro);
+      });
+
+    return false;
+  }
+
     function cadastrar() {
         aguardar();
 
@@ -205,7 +250,7 @@
 
         return false;
     }
-
+    
     function sumirMensagem() {
         cardErro.style.display = "none"
     }

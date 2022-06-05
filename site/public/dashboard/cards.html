@@ -28,9 +28,9 @@
         <nav>
             <ul class="nav-list">
         
-                <li><a href="mural.html">Dicas</a></li>
+                <li><a href="mural.html">Comunidade</a></li>
                 <li><a href="#">|</a></li>
-                <li><a href="dashboard.html">Comunidade</a></li>
+                <li><a href="dashboard.html">Dicas</a></li>
                 <li><a href="#">|</a></li>
                 <li><a href="cards.html">Questionário</a></li>
 
@@ -113,7 +113,6 @@
         </div>
     </div>
 </div>
-<script src="scripts.js"></script>
 </body>          
 </html>
 <script>
@@ -184,9 +183,9 @@ function totalScore(){
 // função do que vai receber info de acordo com a score
 // menor que sete pq é a 'metade' de 15
 function getInfoBasedOnScore(){
-    if(totalScore() < 7){
+    if(totalScore() < 10){
         var score_info = "Você precisa viajar mais.. :(";
-    } else if(totalScore() > 7){
+    } else if(totalScore() > 10){
         var score_info = "Parabéns! Você é um viajante nato!"
     }
     return score_info;

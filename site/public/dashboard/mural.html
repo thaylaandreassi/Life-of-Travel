@@ -9,7 +9,7 @@
     <title>LOT | Dicas Exclusivas </title>
     <link rel="stylesheet" href="mural.css">
     <link rel="stylesheet" href="style.css">
-
+   
     <script src="../js/funcoes.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -27,9 +27,9 @@
         <nav>
             <ul class="nav-list">
         
-                <li><a href="mural.html">Dicas</a></li>
+                <li><a href="mural.html">Comunidade</a></li>
                 <li><a href="#">|</a></li>
-                <li><a href="dashboard.html">Comunidade</a></li>
+                <li><a href="dashboard.html">Dicas</a></li>
                 <li><a href="#">|</a></li>
                 <li><a href="cards.html">Questionário</a></li>
 
@@ -47,6 +47,10 @@
                 <h1>Dicas exclusivas para sua viagem</h1>
                 <br>
                 <p>Informe o destino e sua dica!</p>
+
+                <p>
+                    Já temos <b id="cont_mural"></b> de dicas!!!! 
+                </p>
             </div>
 
             <div class="div-form">
@@ -112,6 +116,50 @@
 <script>
 
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    function comentar() {
+    fetch("/avisos/comentar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
+      .then(function (resposta) {
+        console.log("ESTOU NO THEN DO entrar()!");
+
+        if (resposta.ok) {
+          console.log(resposta);
+
+          /*parametrizar as respostas do console*/
+          console.log("Deu certo a contagem !!", resposta)
+          resposta.json().then(cont => {
+            console.log(cont);
+            console.log(JSON.stringify(cont[0].c));
+            var conteudo = document.getElementById("cont_mural")
+            var comentarios_cadastrados = cont[0].c;
+            conteudo.innerHTML = `${comentarios_cadastrados}`;
+          })
+
+           /*chamando a resposta em uma div - inner*/
+          //  var conteudo = document.getElementById("cont_usuarios")
+          //  var usuarios_cadastrados = cont[0].contagem;
+          //  conteudo.innerHTML = `${usuarios_cadastrados}`;
+
+        } else {
+          console.log("Houve um erro ao tentar realizar a contagem!");
+
+          resposta.text().then((texto) => {
+            console.error(texto);
+            finalizarAguardar(texto);
+          });
+        }
+    })
+      .catch(function (erro) {
+        console.log(erro);
+    });
+
+    return false;
+  }
 
     function limparFormulario() {
         document.getElementById("form_postagem").reset();
@@ -216,9 +264,9 @@
 
 
                         spanID.innerHTML = "ID: <b>" + publicacao.idAviso + "</b>";
-                        spanTitulo.innerHTML = "Título: <b>" + publicacao.titulo + "</b>";
+                        spanTitulo.innerHTML = "Destino: <b>" + publicacao.titulo + "</b>";
                         spanNome.innerHTML = "Autor: <b>" + publicacao.nome + "</b>";
-                        divDescricao.innerHTML = "Descrição: <b>" + publicacao.descricao + "</b>";
+                        divDescricao.innerHTML = "Dica: <b>" + publicacao.descricao + "</b>";
                         btnEditar.innerHTML = "Editar";
                         btnDeletar.innerHTML = "Deletar";
 

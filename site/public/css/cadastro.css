@@ -10,18 +10,22 @@
   
   .frame-p p {
   font-family: Poppins;
-  color: #fff;
+  color: #AB3454;
   font-weight:bolder;
   }
   
   .frame-p p {
     margin-left:50px;
   }
+  .frame-p p:hover{
+    color:#abd699;
+    transition: 0.3s;
+  }
   .frame {
     width: 120%;
     display: flex;
     align-items: center;
-    background-color: #75c9b7;
+    background-color: white;
     padding: 1rem;
   }
 
@@ -168,44 +172,27 @@
   font-weight: 500;
   color: #fff;
 }
+footer {
+  text-align: center;
+  padding: 1px;
+  background-color: white;
+}
+.copyright{
+  color: black;
+  font-size: 13px;
+  margin: 20px 0;
+}
 
 /* Responsividade */
 @media screen and (max-width: 1330px) {
-  .form-image {
-      display: none;
-  }
-  .container {
-      width: 50%;
-  }
-  .form {
-      width: 100%;
-  }
+.form-image {
+    display: none;
 }
-
-@media screen and (max-width: 1064px) {
-  .container {
-      width: 90%;
-      height: auto;
-  }
-  .inputs {
-      flex-direction: column;
-      z-index: 5;
-      padding-right: 5rem;
-      max-height: 10rem;
-      overflow-y: scroll;
-      flex-wrap: nowrap;
-  }
-  .gender-inputs {
-      margin-top: 2rem;
-  }
-  .gender-group {
-      flex-direction: column;
-  }
-  .gender-title h6 {
-      margin: 0;
-  }
-  .gender-input {
-      margin-top: 0.5rem;
-  }
+.container {
+    width: 50%;
+}
+.form {
+    width: 100%;
+}
 }
 
