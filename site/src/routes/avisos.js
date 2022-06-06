@@ -6,6 +6,9 @@ var avisoController = require("../controllers/avisoController");
 router.get("/", function (req, res) {
     avisoController.testar(req, res);
 });
+router.post("/comentar", function(req, res) {
+    avisoController.comentar(req, res)
+});
 
 router.get("/listar", function (req, res) {
     avisoController.listar(req, res);
