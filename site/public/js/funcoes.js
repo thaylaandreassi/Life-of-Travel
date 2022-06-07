@@ -16,7 +16,7 @@ function validarSessao() {
 
         // finalizarAguardar();
     } else {
-        window.location = "login.html";
+        window.location = "../login.html";
     }
 }
 
@@ -24,7 +24,7 @@ function limparSessao() {
     // aguardar();
     sessionStorage.clear();
     // finalizarAguardar();
-    window.location = "login.html";
+    window.location = "../login.html";
 }
 
 // carregamento (loading)

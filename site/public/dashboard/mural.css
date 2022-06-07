@@ -44,7 +44,25 @@ a {
   background-color: #46ad94;
 }
 
+.sair {
+  cursor: pointer;
+    font-family: Poppins;
+    border: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #abd699;
+    width: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    transition: 0.4s;
+}
 
+.sair:hover {
+  background-color: #ab3454;
+  transition: 0.3s;
+}
 
 .container {
     width: 80%;
