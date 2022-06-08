@@ -187,7 +187,7 @@ function totalScore(){
 function getInfoBasedOnScore(){
     if(totalScore() < 10){
         var score_info = "Você precisa viajar mais.. :(";
-    } else if(totalScore() > 10){
+    } else if(totalScore() >= 10){
         var score_info = "Parabéns! Você é um viajante nato!"
     }
     return score_info;
