@@ -53,9 +53,9 @@
                           <div id="question-1">
                             <h2>Questão 1</h2>
                               <h3>Você viaja muito? </h3>
-                              <input id="question-1-answer-a" type="radio" name="favelang" value=1> O que seria viajar?<br>
-                              <input id="question-1-answer-b" type="radio" name="favelang" value=2> Raramente<br>
-                              <input id="question-1-answer-c" type="radio" name="favelang" value=3> Sim, já conheci alguns países e cidades<br>
+                              <input id="question-1-answer-a" type="radio" name="favelang" value="1"> O que seria viajar?<br>
+                              <input id="question-1-answer-b" type="radio" name="favelang" value="2"> Raramente<br>
+                              <input id="question-1-answer-c" type="radio" name="favelang" value="3"> Sim, já conheci alguns países e cidades<br>
                               <div id="submit1" class="button">Enviar Resposta</div>
                       <div class="clearfix"></div>
                           </div>
@@ -135,6 +135,7 @@ var question_five = document.getElementById('question-5');
 // foi atribuido os valores no function, ou seja, os parametros para colocar o que o answer vai receber
 function storeAnswer(question_number, event){
 // pegando apenas os eventos relacionados com o tipo de radio
+//  target é o elemento quem disparou o evento
     if(event.target.type === 'radio'){
         // apenas para controlar no console o evento e o value
         //toda vez que desparar um evento o value será colocado
@@ -183,11 +184,10 @@ function totalScore(){
 }
 
 // função do que vai receber info de acordo com a score
-// menor que sete pq é a 'metade' de 15
 function getInfoBasedOnScore(){
-    if(totalScore() < 10){
+    if(totalScore() <= 10){
         var score_info = "Você precisa viajar mais.. :(";
-    } else if(totalScore() >= 10){
+    } else if(totalScore() > 10){
         var score_info = "Parabéns! Você é um viajante nato!"
     }
     return score_info;
