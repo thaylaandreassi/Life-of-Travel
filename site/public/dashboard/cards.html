@@ -118,41 +118,24 @@
 </body>          
 </html>
 <script>
-// Variavél vazia para receber as respostas 
-// Foi usado a chave porque determina que lá dentro vai chegar um objeto
+
 var answers = {};
 
-
-// Armazenar todas as questões do html 
-// Coloquei em var para poder armazenar
-// O document representa a página e o get element by id vai pegar o elemento de acordo com o id dele
 var question_one = document.getElementById('question-1');
 var question_two = document.getElementById('question-2');
 var question_three = document.getElementById('question-3');
 var question_four = document.getElementById('question-4');
 var question_five = document.getElementById('question-5');
 
-// foi atribuido os valores no function, ou seja, os parametros para colocar o que o answer vai receber
 function storeAnswer(question_number, event){
-// pegando apenas os eventos relacionados com o tipo de radio
-//  target é o elemento quem disparou o evento
+
     if(event.target.type === 'radio'){
-        // apenas para controlar no console o evento e o value
-        //toda vez que desparar um evento o value será colocado
         console.log(event.target.value);
-        // vetor chamado answers com dois elementos
-        // o elemento será do tipo inteiro, por isso do parseInt
-        // no console ele é como uma string e pelo parseint ele se torna inteiro! 
-        // dentro do objeto deve ser criado um vetor com a questão e o número da questão
-        // está unindo as duas questões
         answers['question'+question_number] = parseInt(event.target.value);
-        // para armazenar, ele retorna na console a questão e o número
         console.log(answers);
     }
 }
-// adicionando o evento de click em todas as divs
-// chama a função storeAnswer com o número da pergunta
-// o que faz o event listener?
+
 question_one.addEventListener('click', function(event){
     storeAnswer(1, event)
 })
@@ -169,9 +152,6 @@ question_five.addEventListener('click', function(event){
     storeAnswer(5, event)
 })
 
-//função para armazenar o total score
-// está sendo passado os parametros, como: answer.question1+
-// o + é pq está somando os valores!
 function totalScore(){
     var total_score = 
     answers.question1+
@@ -183,7 +163,6 @@ function totalScore(){
     return total_score;
 }
 
-// função do que vai receber info de acordo com a score
 function getInfoBasedOnScore(){
     if(totalScore() <= 10){
         var score_info = "Você precisa viajar mais.. :(";
@@ -193,26 +172,21 @@ function getInfoBasedOnScore(){
     return score_info;
 }
 
-// submit pq está no id da div dos botões
+
 var submit1 = document.getElementById('submit1');
 var submit2 = document.getElementById('submit2');
 var submit3 = document.getElementById('submit3');
 var submit4 = document.getElementById('submit4');
 var submit5 = document.getElementById('submit5');
 
-//função para pular para as próximas questões
-// o paramêtro é o question_number por conta da ordem 
+ 
 function nextQuestion(question_number){
-    // essa variavel vai pegar a questão corrente
-    // usa-se o menos 1 para manipular e fazer a questão anterior sumir, ps: fica númerico
+ 
     var current_question_number = question_number - 1;
-    // para devolver como string, como inteiro
+
     var question_number = question_number.toString();
     var current_question_number = current_question_number.toString();
-
-    // Para receber as strings pois não pode ser passado como número
-    // o + é para concatenar
-    // o primeiro elemento é para o user ver, pegou o elemento pelo id  
+     
     var el = document.getElementById('question-'+question_number);
     var el2 = document.getElementById('question-'+current_question_number);
      
